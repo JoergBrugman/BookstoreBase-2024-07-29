@@ -8,7 +8,7 @@ pageextension 50100 "BSB Customer Card" extends "Customer Card"
             {
                 Caption = 'Bookstore';
 
-                field("BSB Favorite Book Nr."; Rec."BSB Favorite Book Nr.")
+                field("BSB Favorite Book Nr."; Rec."BSB Favorite Book No.")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Favorite Book Nr. field.', Comment = '%';
@@ -25,7 +25,7 @@ pageextension 50100 "BSB Customer Card" extends "Customer Card"
             part(BookFactbox; "BSB Book Factbox")
             {
                 ApplicationArea = All;
-                SubPageLink = "No." = field("BSB Favorite Book Nr.");
+                SubPageLink = "No." = field("BSB Favorite Book No.");
             }
         }
     }

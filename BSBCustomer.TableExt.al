@@ -2,7 +2,7 @@ tableextension 50100 "BSB Customer" extends Customer
 {
     fields
     {
-        field(50100; "BSB Favorite Book Nr."; Code[20])
+        field(50100; "BSB Favorite Book No."; Code[20])
         {
             Caption = 'Favorite Book Nr.';
             TableRelation = "BSB Book";
@@ -12,14 +12,14 @@ tableextension 50100 "BSB Customer" extends Customer
                 BSBBook: Record "BSB Book";
             begin
 
-                if ("BSB Favorite Book Nr." <> '') and ("BSB Favorite Book Nr." <> xRec."BSB Favorite Book Nr.") then begin
+                if ("BSB Favorite Book No." <> '') and ("BSB Favorite Book No." <> xRec."BSB Favorite Book No.") then begin
                     // BSBBook.Get("BSB Favorite Book Nr.");
                     // BSBBook.TestBlocked();
-                    BSBBook.TestBlocked("BSB Favorite Book Nr.");
+                    BSBBook.TestBlocked("BSB Favorite Book No.");
                     BSBBook.TestBlocked();
                 end;
 
-                if ("BSB Favorite Book Nr." <> xRec."BSB Favorite Book Nr.") and (CurrFieldNo > 0) then
+                if ("BSB Favorite Book No." <> xRec."BSB Favorite Book No.") and (CurrFieldNo > 0) then
                     CalcFields("BSB Favorite Book Description");
             end;
         }
@@ -28,7 +28,7 @@ tableextension 50100 "BSB Customer" extends Customer
             Caption = 'Favorite Book Description';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = lookup("BSB Book".Description where("No." = field("BSB Favorite Book Nr.")));
+            CalcFormula = lookup("BSB Book".Description where("No." = field("BSB Favorite Book No.")));
         }
     }
 }
