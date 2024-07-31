@@ -1,3 +1,6 @@
+/// <summary>
+/// Table BSB Book (ID 50100).
+/// </summary>
 table 50100 "BSB Book"
 {
     // [x] Ein Buch darf nicht gelöscht
