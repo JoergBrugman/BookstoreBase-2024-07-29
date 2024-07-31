@@ -1,3 +1,6 @@
+/// <summary>
+/// Page BSB Book Card (ID 50100).
+/// </summary>
 page 50100 "BSB Book Card"
 {
     Caption = 'Book Card';
