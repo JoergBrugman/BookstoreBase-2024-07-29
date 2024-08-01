@@ -11,5 +11,7 @@
     "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.OnSaveAlFileAction": "Rename",
     "CRS.ObjectNamePrefix": "BSB ",
-    "editor.snippetSuggestions": "bottom"
+    "editor.snippetSuggestions": "bottom",
+    "xliffSync.parseFromDeveloperNote": true,
+    "xliffSync.parseFromDeveloperNoteOverwrite": true
 }
